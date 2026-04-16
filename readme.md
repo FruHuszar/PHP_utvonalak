@@ -56,3 +56,18 @@ Ahelyett, hogy tippelgetnénk, hol van a fájlunk a szerver merevlemezén, a PHP
 
 - Fizikai elérési út: A __DIR__ mindig a jelenlegi fájl teljes mappaszerkezetét adja vissza (pl. C:\xampp\htdocs...).
 - Magic Constant: Azért "mágikus", mert az értéke automatikusan változik attól függően, hogy melyik fájlban írtad le.
+
+## Átirányítás 404-re ha rossz az url vége
+
+```php
+if (isset($utvonalak[$utvonal])) {
+    require_once $utvonalak[$utvonal];
+} else {
+    include_once $utvonalak["/404"];
+}
+```
+
+## Rövidítések
+
+- pdo: php data object
+- api: application programming interface
